@@ -3,45 +3,115 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>医学 AI 交互平台</title>
+  <title>MedAI Research Assistant</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <h1>医学 AI 交互平台</h1>
-      <p>面向医生与医学生的 AI 辅助学习、交流和知识检索网站。</p>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="index.html" aria-label="MedAI Research Assistant home">
+        <span class="brand-mark">M</span>
+        <span>MedAI Research Assistant</span>
+      </a>
+      <nav class="nav-links" aria-label="主导航">
+        <a href="discussion.html">讨论</a>
+        <a href="tools.html">工具</a>
+        <a href="database.html">数据库</a>
+      </nav>
     </div>
   </header>
 
-  <main class="container">
-    <section class="intro">
-      <h2>请选择功能入口</h2>
-      <p>当前是第一版主页，后续可以继续扩展 AI 问答、病历辅助、医学工具和知识库等功能。</p>
+  <main>
+    <section class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Medical AI · Clinical Learning · Research Assistant</p>
+          <h1>面向医生与医学生的医学 AI 交互工作台</h1>
+          <p class="hero-text">聚合讨论、工具和数据库，帮助用户进行病例学习、医学资料检索、研究整理与 AI 辅助分析。</p>
+          <div class="hero-actions">
+            <a class="primary-button" href="#assistant">开始使用</a>
+            <a class="secondary-button" href="database.html">查看数据库</a>
+          </div>
+        </div>
+
+        <section class="assistant-panel" id="assistant" aria-label="AI 研究助手演示面板">
+          <div class="panel-header">
+            <div>
+              <p class="panel-label">AI Research Assistant</p>
+              <h2>医学问题快速整理</h2>
+            </div>
+            <span class="status-pill">Demo</span>
+          </div>
+          <div class="assistant-box">
+            <label for="research-query">输入一个医学学习或研究问题</label>
+            <textarea id="research-query" rows="4" placeholder="例如：帮我整理心衰患者出院随访需要关注哪些指标"></textarea>
+            <button class="primary-button full-width" id="mock-submit" type="button">生成研究思路</button>
+          </div>
+          <div class="assistant-result" id="assistant-result" aria-live="polite">
+            <strong>示例输出</strong>
+            <p>AI 可在后续版本中辅助整理问题背景、检索方向、病例讨论要点和参考资料清单。</p>
+          </div>
+        </section>
+      </div>
     </section>
 
-    <section class="entry-grid" aria-label="子页入口">
-      <a class="entry-card" href="discussion.html">
-        <h3>讨论</h3>
-        <p>病例讨论、学习交流、临床经验分享。</p>
-      </a>
+    <section class="container dashboard-section" aria-label="功能入口">
+      <div class="section-heading">
+        <p class="eyebrow">Interactive Dashboard</p>
+        <h2>三个核心入口</h2>
+        <p>先建立清晰的信息架构，后续可以逐步接入 AI 问答、医学计算器、病历助手和知识库检索。</p>
+      </div>
 
-      <a class="entry-card" href="tools.html">
-        <h3>工具</h3>
-        <p>医学计算器、病历模板、AI 辅助工具入口。</p>
-      </a>
+      <div class="entry-grid">
+        <a class="entry-card" href="discussion.html">
+          <span class="card-kicker">Discussion</span>
+          <h3>讨论</h3>
+          <p>病例讨论、临床经验、医学生学习交流，以及 AI 辅助总结讨论重点。</p>
+          <span class="card-link">进入讨论</span>
+        </a>
 
-      <a class="entry-card" href="database.html">
-        <h3>数据库</h3>
-        <p>指南、文献、病例和医学知识资料整理。</p>
-      </a>
+        <a class="entry-card" href="tools.html">
+          <span class="card-kicker">Tools</span>
+          <h3>工具</h3>
+          <p>医学计算器、病历模板、脱敏检查、研究计划生成等 AI 辅助工具。</p>
+          <span class="card-link">进入工具</span>
+        </a>
+
+        <a class="entry-card" href="database.html">
+          <span class="card-kicker">Database</span>
+          <h3>数据库</h3>
+          <p>指南、文献、病例、知识卡片和可检索的医学资料库。</p>
+          <span class="card-link">进入数据库</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="container metrics-section" aria-label="平台能力预览">
+      <div class="metric-card">
+        <span>01</span>
+        <h3>可信医学内容</h3>
+        <p>以指南、文献、病例库和专家讨论作为知识基础。</p>
+      </div>
+      <div class="metric-card">
+        <span>02</span>
+        <h3>AI 辅助研究</h3>
+        <p>帮助整理临床问题、研究方向、关键词和资料摘要。</p>
+      </div>
+      <div class="metric-card">
+        <span>03</span>
+        <h3>专业交互体验</h3>
+        <p>使用清爽、学术、可扩展的 dashboard 页面结构。</p>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <p>本网站内容仅用于医学学习与交流，不替代专业医疗决策。</p>
+    <div class="container footer-inner">
+      <p>仅用于医学学习、研究辅助与专业交流，不替代医生诊疗决策。</p>
+      <p>MedAI Research Assistant</p>
     </div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
